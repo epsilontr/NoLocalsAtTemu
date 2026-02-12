@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "NoLocalsAtTemu",
+  "version": "dc: j84c",
+  "description": "Temu’da “Yerel / Local” etiketli ürünleri kaldırır veya gizler. Popup’tan kontrol edilir.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["*://temu.com/*", "*://*.temu.com/*"],
+  "action": {
+    "default_title": "NoLocalsAtTemu",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "sw.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://temu.com/*", "*://*.temu.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

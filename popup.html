@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>NoLocalsAtTemu</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="title">Temu Filtre</div>
+      <div class="subtitle">“Yerel / Local” ürünleri saklar</div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">Durum</div>
+          <div class="hint" id="statusText">-</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="enabled" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="label">Mod</div>
+          <div class="hint">Boşluk kalmaması için “Kaldır” önerilir.</div>
+        </div>
+      </div>
+
+      <div class="seg">
+        <button id="modeRemove" class="segbtn">Kaldır</button>
+        <button id="modeHide" class="segbtn">Gizle</button>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="label">Gizlenen</div>
+          <div class="hint"><span id="hiddenCount">0</span> ürün</div>
+        </div>
+        <button class="ghost" id="refresh">Tara</button>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="label">Debug</div>
+          <div class="hint">Konsola log basar.</div>
+        </div>
+        <label class="switch small">
+          <input type="checkbox" id="debug" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="mini">Not: Temuda şuanlık yabancı satıcılardan çok yerli satıcılar var ondan kaynaklı aktif hale getirdiğinizde bulunduğunuz sayfada az ürün gözükebilir...</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
